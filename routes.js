@@ -1,11 +1,12 @@
 const { Router } = require('express');
 const router = Router();
 const cadastro = require('./src/controllers/cadastro');
+const login = require('./src/controllers/login')
 
 // Rotas de login
-router.get('/', (req, res) => {
-    res.render('login');
-});
+router.get('/login', login.index);
+router.post('/logar', login.logar);
+
 
 // Rotas de cadastro
 router.get('/cadastro', cadastro.index )
