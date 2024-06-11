@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+.erro-404 {
+    margin: 50px auto;
+    width: 480px;
+    height: 500px;
+    
+    justify-content: center;
+    
+}
+
+
+.erro-404 h1 {
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 50px;
+
+font-weight: 100;
+text-transform: uppercase;
+}
+
+.erro-404 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    
+}

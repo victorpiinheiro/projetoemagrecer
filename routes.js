@@ -12,4 +12,11 @@ router.post('/logar', login.logar);
 router.get('/cadastro', cadastro.index )
 router.post('/register', cadastro.register);
 
+
+//rotas da pagina principal
+
+router.get('/index', (req, res) => {
+    res.render('index');
+})
+
 module.exports = router;

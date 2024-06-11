@@ -9,8 +9,9 @@ class Login {
         this.usuario = null
     }
 
-    logar(){
-        this.valida();
+    async logar(){
+        if (this.errors.length > 0) return;
+       await this.valida();
 
     }
 
@@ -19,13 +20,11 @@ class Login {
 
         const sql = 'select * from cadastro where email = ? AND senha = ?';
         const [dados] = await connection.execute(sql, [this.body.email, this.body.password]);
-       this.usuario = [dados];
+       this.usuario = dados;
        console.log(this.usuario.length);
+       console.log(this.usuario);
         
-        if (this.usuario < 1) this.errors.push('usuario ou senha invalido');
-
-        console.log(this.errors);
-
+        if (this.usuario.length < 1) this.errors.push('usuario ou senha invalido');
     }
 
     cleanUp(){
