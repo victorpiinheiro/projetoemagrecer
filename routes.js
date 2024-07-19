@@ -15,8 +15,10 @@ router.post('/register', cadastro.register);
 
 //rotas da pagina principal
 
-router.get('/index', (req, res) => {
+router.get('/', (req, res) => {
     res.render('index');
+
+
 })
 
 module.exports = router;

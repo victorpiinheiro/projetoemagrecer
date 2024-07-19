@@ -1,27 +1,30 @@
 <%- include('includes/head') %>
 <%- include('includes/nav') %>
 
-<div>
-
-</div>
-
-<form action="#" method="post">
 <div class="imc">
-    <h1>Cadastre seus dados</h1>
-    <label> Peso </label>
-    <input type="text" name="">
+    <h1>Calcule seu IMC</h1>
+
+    <div class="grid-container">
+        <div class="form">
+            <form action="#" method="post">
+                <label> Peso </label>
+                <input type="text" name="" placeholder="Digite seu peso em quilos"> 
+
+                <label> Altura </label>
+                <input type="text" name="" placeholder="Digite a altura em centímetros">
+
+                <button type="submit">Calcular</button>
+            </form>
+        </div>
+        <div class="result">
+            <p>Mostrar resultado aqui</p>
+        </div>
+    </div>
 
 
-    <label>altura</label>
-    <input type="text" name="">
-
-
-    <button type="submit">Calcular</button>
-    <p>mostrar resultado aqui</p>
-</form>
+    <div class="Legend">
+        <h3>LEGENDA</h3>
+    </div>
 </div>
-
-
-
 
 <%- include('includes/footer') %>
